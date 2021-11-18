@@ -26,6 +26,7 @@ var rollbar = new Rollbar({
 rollbar.log('Hello world!')
 
 app.get('/morecats', (req, res) => {
+    res.send('check out these cats')
     try {  
     getAllTheCats()
     } catch (err) {
