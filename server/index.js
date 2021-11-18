@@ -26,7 +26,11 @@ var rollbar = new Rollbar({
 rollbar.log('Hello world!')
 
 app.get('/morecats', (req, res) => {
+    try {  
     getAllTheCats()
+    } catch (err) {
+        rollbar.error(err)
+    }
 })
 
 const server = process.env.PORT || 4000
