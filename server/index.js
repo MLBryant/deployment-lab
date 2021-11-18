@@ -14,9 +14,10 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/style.css'))
 })
 
+// include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-  accessToken: '2095f7101147464eb8a5fe1ec04c066c',
+  accessToken: 'a7d07b549daf4c7e8e85d2a91c535ee7',
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
